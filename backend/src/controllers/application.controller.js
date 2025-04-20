@@ -45,7 +45,7 @@ export const applyJob = async (req, res) => {
     });
 
     // Push the new application ID to the job's application list
-    job.applications.push(newApplication._id);
+    job.application.push(newApplication._id);
     await job.save();
 
     return res.status(201).json({
